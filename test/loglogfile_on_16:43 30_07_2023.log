@@ -1,0 +1,49 @@
+2023-07-30 16:43:24,458 - Folder sync logger - INFO - Source synchronization folder /home/roshanth/Documents/Python/Folder_Sync_App-1/test/./test_source_1
+2023-07-30 16:43:24,459 - Folder sync logger - INFO - Replica Synchronization folder /home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica
+2023-07-30 16:43:24,459 - Folder sync logger - INFO - Log file location /home/roshanth/Documents/Python/Folder_Sync_App-1/test/./log
+2023-07-30 16:43:24,459 - Folder sync logger - INFO - Synchronization interval 5
+2023-07-30 16:43:24,459 - Folder sync logger - INFO - Press Ctrl + C to stop Synchronization
+2023-07-30 16:43:24,460 - Folder sync logger - INFO - Folder synchronization started on 16:43 30_07_2023
+2023-07-30 16:43:24,512 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/Frontech_solutions_Employment_Contract_Roshanth signed-1.pdf' has been deleted successfully.
+2023-07-30 16:43:24,513 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/Assignment QNX.docx' has been deleted successfully.
+2023-07-30 16:43:24,513 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/folder_sync.py' has been deleted successfully.
+2023-07-30 16:43:24,514 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/Void_Cheque-1.pdf' has been deleted successfully.
+2023-07-30 16:43:24,514 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/folder_sync (copy).py' has been deleted successfully.
+2023-07-30 16:43:24,515 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/cloud-main.zip' has been deleted successfully.
+2023-07-30 16:43:24,515 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/command.txt' has been deleted successfully.
+2023-07-30 16:43:24,636 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./test_source_1/test1/chromedriver_linux64.zip' has been copied successfully.
+2023-07-30 16:43:24,638 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./test_source_1/test1/command.txt' has been copied successfully.
+2023-07-30 16:43:24,639 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/Frontech_solutions_Employment_Contract_Roshanth signed-1.pdf' has been deleted successfully.
+2023-07-30 16:43:24,640 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/Assignment QNX.docx' has been deleted successfully.
+2023-07-30 16:43:24,640 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/folder_sync.py' has been deleted successfully.
+2023-07-30 16:43:24,641 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/cloud-main.zip' has been deleted successfully.
+2023-07-30 16:43:24,642 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/command.txt' has been deleted successfully.
+2023-07-30 16:43:24,648 - Folder sync logger - INFO - Directory '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/test2/test123/man' successfully deleted.
+2023-07-30 16:43:24,649 - Folder sync logger - INFO - Directory '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/test2/test123/man3' successfully deleted.
+2023-07-30 16:43:24,650 - Folder sync logger - INFO - Directory '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/test2/test123/man2' successfully deleted.
+2023-07-30 16:43:24,652 - Folder sync logger - INFO - Directory '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/test2/test123/man4' successfully deleted.
+2023-07-30 16:43:29,656 - Folder sync logger - INFO - Folder synchronization started on 16:43 30_07_2023
+2023-07-30 16:43:29,745 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./test_source_1/test1/command.txt' has been copied successfully.
+2023-07-30 16:43:34,755 - Folder sync logger - INFO - Folder synchronization started on 16:43 30_07_2023
+2023-07-30 16:43:39,826 - Folder sync logger - INFO - Folder synchronization started on 16:43 30_07_2023
+2023-07-30 16:43:44,896 - Folder sync logger - INFO - Folder synchronization started on 16:43 30_07_2023
+2023-07-30 16:43:49,966 - Folder sync logger - INFO - Folder synchronization started on 16:43 30_07_2023
+2023-07-30 16:43:55,034 - Folder sync logger - INFO - Folder synchronization started on 16:43 30_07_2023
+2023-07-30 16:43:55,036 - Folder sync logger - INFO - Directory '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test' successfully created.
+2023-07-30 16:43:55,038 - Folder sync logger - INFO - Directory '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test2' successfully created.
+2023-07-30 16:43:55,039 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./test_source_1/test2/test2.txt' has been copied successfully.
+2023-07-30 16:43:55,040 - Folder sync logger - INFO - Directory '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1' successfully created.
+2023-07-30 16:43:55,070 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./test_source_1/test1/test1.txt' has been copied successfully.
+2023-07-30 16:43:55,098 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./test_source_1/test1/chromedriver_linux64.zip' has been copied successfully.
+2023-07-30 16:43:55,100 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./test_source_1/test1/command.txt' has been copied successfully.
+2023-07-30 16:43:55,102 - Folder sync logger - INFO - Directory '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/test2' successfully created.
+2023-07-30 16:43:55,103 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./test_source_1/test1/test2/test2.txt' has been copied successfully.
+2023-07-30 16:43:55,104 - Folder sync logger - INFO - Directory '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/test2/test123' successfully created.
+2023-07-30 16:43:55,106 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./test_source_1/test1/test2/test123/test123.txt' has been copied successfully.
+2023-07-30 16:43:55,107 - Folder sync logger - INFO - Directory '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./replica/test1/test2/test123/new_folder' successfully created.
+2023-07-30 16:44:00,114 - Folder sync logger - INFO - Folder synchronization started on 16:44 30_07_2023
+2023-07-30 16:44:05,194 - Folder sync logger - INFO - Folder synchronization started on 16:44 30_07_2023
+2023-07-30 16:44:10,274 - Folder sync logger - INFO - Folder synchronization started on 16:44 30_07_2023
+2023-07-30 16:44:15,343 - Folder sync logger - INFO - Folder synchronization started on 16:44 30_07_2023
+2023-07-30 16:44:20,414 - Folder sync logger - INFO - Folder synchronization started on 16:44 30_07_2023
+2023-07-30 16:44:20,419 - Folder sync logger - INFO - File '/home/roshanth/Documents/Python/Folder_Sync_App-1/test/./test_source_1/loglogfile_on_16:43 30_07_2023.log' has been copied successfully.

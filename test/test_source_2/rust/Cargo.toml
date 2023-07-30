@@ -1,0 +1,42 @@
+[package]
+name = "selenium-manager"
+version = "1.0.0-M4"
+edition = "2021"
+authors = ["Selenium <selenium-developers@googlegroups.com"]
+license = "Apache-2.0"
+homepage = "https://www.selenium.dev/"
+repository = "https://github.com/SeleniumHQ/selenium"
+documentation = "https://www.selenium.dev/documentation/"
+description = """
+Selenium Manager is a CLI tool that automatically manages the browser/driver infrastructure required by Selenium.
+"""
+
+[dependencies]
+clap = { version = "4.3.19", features = ["derive"] }
+log = "0.4.19"
+env_logger = "0.10.0"
+regex = "1.9.1"
+tokio = { version = "1.29.1", default-features = false, features = ["macros", "net", "rt-multi-thread"] }
+tempfile = "3.6.0"
+reqwest = { version = "0.11.18", default-features = false, features = [ "rustls-tls" ] }
+zip = "0.6.6"
+directories = "5.0.1"
+serde = { version = "1.0.171", features = ["derive"] }
+serde_json = "1.0.103"
+flate2 = "1.0.26"
+tar = "0.4.39"
+infer = "0.14.0"
+exitcode = "1.1.2"
+is_executable = "1.0.1"
+toml = "0.7.6"
+
+[dev-dependencies]
+assert_cmd = "2.0.12"
+rstest = "0.17.0"
+
+[profile.release]
+opt-level = 'z'     # Optimize for size
+lto = true          # Enable Link Time Optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations
+panic = 'abort'     # Abort on panic
+strip = true        # Strip symbols from binary*
