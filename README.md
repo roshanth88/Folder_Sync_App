@@ -31,7 +31,7 @@ python3 ./Folder_sync.py "/path/to/source/folder" "/path/to/replica/folder" "/pa
 ```
 
 
-#FUTURE IMPROMENTS
+#FUTURE IMPROMENTS AND COMMENTS
 
 *Current application can't handle copying large files if the synchronization interval is set to a few seconds.  
 *The application can be improved to synchronize folders on different machines.
