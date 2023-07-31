@@ -1,3 +1,6 @@
+"""This is an extract copy of the original Folder_sync.py file with the additional methods stop_sync_thread() and start_sync_thread(), 
+so the folder synchronization can be controlled by a separate thread."""
+
 import argparse
 from datetime import datetime
 import os
@@ -9,6 +12,7 @@ import shutil
 
 from Logger import SingletonLogger
 
+sync_on = True
 
 def get_md5sum_of_file_list(file_list, foldername):
     """Return a dictionary from the given list of files, where the file path is the key and md5sum is the value."""
@@ -19,7 +23,7 @@ def get_md5sum_of_file_list(file_list, foldername):
         try:
             file_dictionary[filepath] = hashlib.md5(open(filepath, "rb").read()).hexdigest()
         except Exception as e:
-            sync_logger.logger.error(f"Error calculating md5sum of the file {filename}: {e}")
+            sync_logger.logger.info(f"Error calculating md5sum of the file {filename}: {e}")
     return file_dictionary
 
 
@@ -56,15 +60,15 @@ def check_and_delete_extra_files(list_source_files, list_replica_files):
                     f"File '{replica_file_path}' has been deleted successfully."
                 )
             except FileNotFoundError:
-                sync_logger.logger.error(
+                sync_logger.logger.info(
                     f"File '{replica_file_path}' not found. Unable to delete."
                 )
             except PermissionError:
-                sync_logger.logger.error(
+                sync_logger.logger.info(
                     f"Permission denied. Unable to delete file '{replica_file_path}'."
                 )
             except Exception as e:
-                sync_logger.logger.error(
+                sync_logger.logger.info(
                     f"An error occurred while deleting the file '{replica_file_path}': {e}"
                 )
 
@@ -79,7 +83,7 @@ def create_folder_and_get_contents(folder_path, create_new_folder=True):
             os.makedirs(folder_path)
             sync_logger.logger.info(f"Directory '{folder_path}' successfully created.")
         except Exception as e:
-            sync_logger.logger.error(f"Error creating directory: {e}")
+            sync_logger.logger.info(f"Error creating directory: {e}")
 
     content_list = os.listdir(folder_path)
     files_only = [
@@ -101,13 +105,13 @@ def sync_folder_by_copy_and_delete_files(
                 shutil.copy(file, replica_folder + "/" + os.path.basename(file))
                 sync_logger.logger.info(f"File '{file}' has been copied successfully.")
             except FileNotFoundError:
-                sync_logger.logger.error(f"File '{file}' not found. Unable to copy.")
+                sync_logger.logger.info(f"File '{file}' not found. Unable to copy.")
             except PermissionError:
-                sync_logger.logger.error(
+                sync_logger.logger.info(
                     f"Permission denied. Unable to copy file '{file}'."
                 )
             except Exception as e:
-                sync_logger.logger.error(
+                sync_logger.logger.info(
                     f"An error occurred while copying the file '{file}': {e}"
                 )
 
@@ -143,7 +147,7 @@ def delete_non_existing_sub_folders(
                     f"Directory '{sub_dir_full_path}' successfully deleted."
                 )
             except Exception as e:
-                sync_logger.logger.error(f"Error deleting directory: {e}")
+                sync_logger.logger.info(f"Error deleting directory: {e}")
 
 
 def sync_folder(source_folder, replica_folder):
@@ -194,12 +198,12 @@ def sync_folder(source_folder, replica_folder):
     )
 
 
-def signal_handler(sig, frame):
-    """
-    Print exit message when stop signal received.
-    """
-    print("Folder synchronization stopped....")
-    exit(0)
+# def signal_handler(sig, frame):
+#     """
+#     Print exit message when stop signal received.
+#     """
+#     print("Folder synchronization stopped....")
+#     exit(0)
 
 
 def check_for_valid_dir(directory_path, dir_name):
@@ -234,13 +238,13 @@ def folder_sync_main(source_folder, replica_folder, log_file_path, sync_interval
     Validate the command line arguments and start and run the folder synchronization in the given
     interval.
     """
-    signal.signal(signal.SIGINT, signal_handler)
+    # signal.signal(signal.SIGINT, signal_handler)
     sync_logger = SingletonLogger(log_file_path)
 
     check_for_valid_dir(source_folder, "Source")
     check_for_valid_dir(replica_folder, "Replica")
 
-    sync_on = True
+    global sync_on
     sync_logger.logger.info(f"Source synchronization folder {source_folder}")
     sync_logger.logger.info(f"Replica Synchronization folder {replica_folder}")
     sync_logger.logger.info(f"Log file location {log_file_path}")
@@ -252,6 +256,16 @@ def folder_sync_main(source_folder, replica_folder, log_file_path, sync_interval
         )
         sync_folder(source_folder, replica_folder)
         time.sleep(sync_interval)
+
+
+def stop_sync_thread():
+    global sync_on
+    sync_on = False
+
+
+def start_sync_thread():
+    global sync_on
+    sync_on = True
 
 
 if __name__ == "__main__":
