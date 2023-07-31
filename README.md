@@ -2,7 +2,7 @@
 Test task to create folder sync app
 
 © 2022 Veeam Software. Confidential information. All rights reserved. All trademarks are the property of their respective owners. 7.26.2023 | 1
-Test Task
+## Test Task
 Please implement a program that synchronizes two folders: source and
 replica. The program should maintain a full, identical copy of source
 folder at replica folder. Solve the test task by writing a program in
@@ -21,3 +21,18 @@ It is allowed (and recommended) to use external libraries implementing other
 well-known algorithms. For example, there is no point in implementing yet
 another function that calculates MD5 if you need it for the task – it is perfectly
 acceptable to use a third-party (or built-in) library.
+
+
+#COMMAND TO START SYNCHRONIZATION 
+
+```cmd
+python3 ./Folder_sync.py "/path/to/source/folder" "/path/to/replica/folder" "/path/to/log/folder" synchronization_interval
+
+```
+
+
+#FUTURE IMPROMENTS
+
+*Current application can't handle copying large files if the synchronization interval is set to a few seconds.  
+*The application can be improved to synchronize folders on different machines.
+*I had a race condition situation when starting synchronization multiple times within the test cases, which I have been handled by the methods stop_sync_thread() and start_sync_thread().
